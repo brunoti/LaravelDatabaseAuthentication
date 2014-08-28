@@ -13,6 +13,7 @@
 
 //Base
 Route::get('/','UsuarioController@index');
+Route::get('/cadastro','UsuarioController@create');
 Route::resource('usuario','UsuarioController');
 
 //session

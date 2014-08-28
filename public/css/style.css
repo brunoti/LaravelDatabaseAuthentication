@@ -1,0 +1,8 @@
+#login .panel{
+	margin:200px 0;
+}
+
+#cadastro .panel{
+	margin:200px auto;
+	max-width: 500px;
+}
