@@ -6,3 +6,11 @@
 	margin:200px auto;
 	max-width: 500px;
 }
+
+body#blank{
+	background-color: rgba(30,30,30,.2);
+}
+
+body#blank .panel{
+	box-shadow: -2px 4px 8px 0px rgba(50, 50, 50, 0.87);
+}

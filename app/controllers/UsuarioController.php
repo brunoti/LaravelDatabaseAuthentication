@@ -15,10 +15,21 @@ class UsuarioController extends BaseController {
 	public function store(){
 		$title = "Cadastro";
 		$users = new User;
+		
+		$validator = Validator::make(
+			array(
+				'firstname' => 'required|min:5',
+				'lastname' => 'required|min:5',
+				'password' => 'required|min:5|confirmed',
+				'email' => 'required|min:5|email'
+				)
+			);	
 
-		$users->username = Input::get('username');
+		$users->firstname = Input::get('firstname');
+		$users->lastname = Input::get('lastname');
 		$users->email = Input::get('email');
-		$users->password = Input::get('password') === Input::get('passwordconfirm') ? Hash::make(Input::get('password')) : die("Senhas não batem!");
+		$users->email = Input::get('email');
+
 		$users->save();
 
 		return Redirect::route('usuario.index');
